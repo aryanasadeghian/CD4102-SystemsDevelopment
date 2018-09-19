@@ -1,0 +1,134 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13-Apr-2018, 10:31:48
+    Author     : aryana.m.sadeghian
+*/
+
+.root {
+    -fx-base: #212121;
+    -fx-color: -fx-base;
+    -fx-accent: #5C5C5C;
+    -fx-default-button: #4A4A4A;
+    -fx-control-inner-background: derive(-fx-base,30%);
+    -fx-control-inner-background-alt: derive(-fx-control-inner-background, -10%);
+    -fx-selection-bar: -fx-accent;
+    -fx-selection-bar-non-focused: #333333;
+    -fx-cell-hover-color: #3C4247;
+    -fx-button-color: #004664;
+}
+
+.scroll-bar > .increment-button > .increment-arrow,
+.scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-background-color: derive(-fx-base, 75%);
+}
+
+
+.right-panel {
+    -fx-background-color: derive(-fx-color, 15%);
+    -fx-alignment: top-center;
+}
+
+.right-panel VBox {
+    -fx-alignment: center;
+    -fx-padding: 0 0 10px 0;
+}
+
+.account-balance-label {
+    -fx-fill: -fx-text-base-color;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.account-balance-value {
+    -fx-fill: -fx-text-base-color;
+}
+
+.button, 
+.toggle-button,
+.radio-button > .radio,
+.check-box > .box,
+.choice-box,
+.color-picker.split-button > .color-picker-label,
+.combo-box-base,
+.combo-box-base:editable > .arrow-button {
+    -fx-base: -fx-button-color;
+    -fx-color: -fx-base;
+    -fx-background: derive(-fx-button-color,26.4%);
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: -fx-text-base-color;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;  
+    -fx-shadow-highlight-color: ladder(
+        -fx-background,
+        rgba(255,255,255,0.07) 0%,
+        rgba(255,255,255,0.07) 20%,
+        rgba(255,255,255,0.07) 70%,
+        rgba(255,255,255,0.7) 90%,
+        rgba(255,255,255,0.75) 100%
+      );
+    -fx-outer-border: derive(-fx-color,-23%);
+    -fx-inner-border: linear-gradient(to bottom,
+                ladder(
+                    -fx-color,
+                    derive(-fx-color,30%) 0%,
+                    derive(-fx-color,20%) 40%,
+                    derive(-fx-color,25%) 60%,
+                    derive(-fx-color,55%) 80%,
+                    derive(-fx-color,55%) 90%,
+                    derive(-fx-color,75%) 100%
+                ),
+                ladder(
+                    -fx-color,
+                    derive(-fx-color,20%) 0%,
+                    derive(-fx-color,10%) 20%,
+                    derive(-fx-color,5%) 40%,
+                    derive(-fx-color,-2%) 60%,
+                    derive(-fx-color,-5%) 100%
+                ));  
+    -fx-body-color: linear-gradient(to bottom,
+            ladder(
+                -fx-color,
+                derive(-fx-color,8%) 75%,
+                derive(-fx-color,10%) 80%
+            ),
+            derive(-fx-color,-8%));   
+    -fx-hover-base: ladder(
+        -fx-base,
+        derive(-fx-base,20%) 20%,
+        derive(-fx-base,30%) 35%,
+        derive(-fx-base,40%) 50%
+     );
+    -fx-pressed-base: derive(-fx-base,-6%);
+    -fx-focus-color: #969696;
+    -fx-faint-focus-color: #96969622;
+    -fx-body-color: linear-gradient(to bottom,
+            ladder(
+                -fx-color,
+                derive(-fx-color,8%) 75%,
+                derive(-fx-color,10%) 80%
+            ),
+            derive(-fx-color,-8%));    
+    
+}
+
+.button:hover {
+    -fx-color: -fx-hover-base;
+}
+
+.button:armed {
+    -fx-color: -fx-pressed-base;
+}
+
+.button:focused {
+    -fx-background-color: -fx-focus-color, -fx-inner-border, -fx-body-color, -fx-faint-focus-color, -fx-body-color;
+    -fx-background-insets: -0.2, 1, 2, -1.4, 2.6;
+    -fx-background-radius: 3, 2, 1, 4, 1;    
+}
+
